@@ -1,0 +1,122 @@
+body {
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mcdu {
+    display:flex;
+    justify-content:center; 
+}
+
+.mcdu-panel {
+    position: relative;
+    display: inline-block;
+}
+
+.mcdu-panel > img {
+    z-index:10;
+    max-height: 100vh;
+}
+
+.mcdu-bg, .mcdu-fg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.mcdu-bg {
+    z-index: -1;
+}
+
+.mcdu-lcd {
+    background-color:#000;
+    width: 100%;
+    height: 100%;
+}
+
+.mcdu-lcd img {
+    position: absolute;
+    top: 7%;
+    left: 12.6%;
+    width: 75%;
+}
+
+[data-used-universe="1"] .screen-glow {
+    filter: brightness(50) blur(0.2vh);
+    opacity: 0.15;
+}
+
+.mcdu-lcd-dust img {
+    display: none;
+    position: absolute;
+    top: 6%;
+    left: 13%;
+    width: 73.5%;
+    opacity: 0.5;
+    transform: scale(-1,1);
+    filter: blur(0.1vh);
+}
+
+[data-used-universe="1"] .mcdu-lcd-dust img {
+    display: inline-block;
+}
+
+[data-button] {
+    position: absolute;
+}
+
+[data-showbuttons="1"] [data-button] {
+    background-color: red;
+    opacity: 0.5;
+}
+
+.glassbutton {
+    top: 6%;
+    left: 13%;
+    width: 73.5%;
+    height: 40%    
+}
+
+.skbutton {
+    width: 6.5%;
+    height: 3.2%;
+    border-radius: 0.2vh;
+}
+
+.btngroup-lsk .skbutton {
+    left: 1.5%;
+}
+
+.btngroup-rsk .skbutton {
+    right: 1.5%;
+}
+
+.sk-1 {
+    top: 12.1%;
+}
+
+.sk-2 {
+    top: 17.2%;
+}
+
+.sk-3 {
+    top: 22.3%;
+}
+
+.sk-4 {
+    top: 27.5%;
+}
+
+.sk-5 {
+    top: 32.7%;
+}
+
+.sk-6 {
+    top: 37.8%;
+}
+

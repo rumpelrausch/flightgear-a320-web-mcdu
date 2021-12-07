@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A320 MCDU</title>
+        <link rel="stylesheet" href="css/mcdu.css" />
+    </head>
+    <body data-used-universe="1" data-showbuttons="0">
+        <div class="mcdu">
+            <div class="mcdu-panel">
+                <img src="img/mcdu-bg.png" />
+                <div class="mcdu-bg">
+                    <div class="mcdu-lcd">
+                        <img src="" data-element="lcdimage" class="screen-img" />
+                        <img src="" data-element="lcdimage" class="screen-glow" />
+                    </div>
+                    <div class="mcdu-lcd-dust">
+                        <img src="img/dust2.png" />
+                    </div>
+                </div>
+                <div class="mcdu-fg">
+                    <div class="btngroup-lsk">
+                        <div data-button="lskbutton:1" class="skbutton sk-1"></div>
+                        <div data-button="lskbutton:2" class="skbutton sk-2"></div>
+                        <div data-button="lskbutton:3" class="skbutton sk-3"></div>
+                        <div data-button="lskbutton:4" class="skbutton sk-4"></div>
+                        <div data-button="lskbutton:5" class="skbutton sk-5"></div>
+                        <div data-button="lskbutton:6" class="skbutton sk-6"></div>
+                    </div>
+                    <div class="btngroup-rsk">
+                        <div data-button="rskbutton:1" class="skbutton sk-1"></div>
+                        <div data-button="rskbutton:2" class="skbutton sk-2"></div>
+                        <div data-button="rskbutton:3" class="skbutton sk-3"></div>
+                        <div data-button="rskbutton:4" class="skbutton sk-4"></div>
+                        <div data-button="rskbutton:5" class="skbutton sk-5"></div>
+                        <div data-button="rskbutton:6" class="skbutton sk-6"></div>
+                    </div>
+                </div>
+                <div data-button="glass" class="glassbutton" onclick="MCDU.toggleUsedUniverse()">
+                </div>
+            </div>
+        </div>
+        <script src="js/mcdu.js">
+        </script>
+    </body>
+</html>
