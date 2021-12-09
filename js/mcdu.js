@@ -111,7 +111,7 @@ const MCDU = (function () {
 
     registerButtons();
     registerKeyboardInput();
-    setInterval(refreshScreen, refreshInterval);
+    //setInterval(refreshScreen, refreshInterval);
     refreshScreen();
 
     return {

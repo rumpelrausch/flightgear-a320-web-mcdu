@@ -94,6 +94,12 @@ body {
     border-radius: 0.2vh;
 }
 
+.numberbutton {
+    width: 7.2%;
+    padding-bottom: 7.2%;
+    border-radius: 50%;
+}
+
 .btngroup-lsk .skbutton {
     left: 1.5%;
 }
@@ -168,4 +174,32 @@ body {
 
 .menu-col6 {
     left: 74.6%;
+}
+
+.number-row1 .numberbutton {
+    top: 74.9%;
+}
+
+.number-row2 .numberbutton {
+    top: 80.4%;
+}
+
+.number-row3 .numberbutton {
+    top: 85.8%;
+}
+
+.number-row4 .numberbutton {
+    top: 91.3%;
+}
+
+.number-col1 {
+    left: 11.5%;
+}
+
+.number-col2 {
+    left: 21.7%;
+}
+
+.number-col3 {
+    left: 31.7%;
 }
