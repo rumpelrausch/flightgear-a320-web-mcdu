@@ -41,9 +41,9 @@ body {
 
 .mcdu-lcd img {
     position: absolute;
-    top: 7%;
-    left: 12.6%;
-    width: 75%;
+    top: 7.1%;
+    left: 12.5%;
+    width: 74.8%;
 }
 
 [data-used-universe="1"] .screen-glow {
@@ -88,6 +88,12 @@ body {
     border-radius: 0.2vh;
 }
 
+.menubutton {
+    width: 10.1%;
+    height: 4.1%;
+    border-radius: 0.2vh;
+}
+
 .btngroup-lsk .skbutton {
     left: 1.5%;
 }
@@ -120,3 +126,46 @@ body {
     top: 37.8%;
 }
 
+.menu-row1 .menubutton {
+    top: 48.7%;
+}
+
+.menu-row2 .menubutton {
+    top: 53.8%;
+}
+
+.menu-row3 .menubutton {
+    top: 58.9%;
+}
+
+.menu-row4 .menubutton {
+    top: 64%;
+}
+
+.menu-row5 .menubutton {
+    top: 69.1%;
+}
+
+.menu-col1 {
+    left: 12%;
+}
+
+.menu-col2 {
+    left: 24.5%;
+}
+
+.menu-col3 {
+    left: 37.1%;
+}
+
+.menu-col4 {
+    left: 49.6%;
+}
+
+.menu-col5 {
+    left: 62.1%;
+}
+
+.menu-col6 {
+    left: 74.6%;
+}
