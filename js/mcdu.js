@@ -66,7 +66,7 @@ const MCDU = (function () {
         };
         body.addEventListener('keyup', (event) => {
             const key = event.key.toUpperCase();
-            if (key.match(/^[A-Z0-9/\-+.]$/)) {
+            if (key.match(/^[A-Z0-9/\-+.\ ]$/)) {
                 if(key === '+' || key === '-') {
                     return sendPlusMinusKey();
                 }
