@@ -1,69 +1,78 @@
 body {
-    background-color: #000;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: #000;
 }
 
 .mcdu {
-    display:flex;
-    justify-content:center; 
-}
-
-.mcdu-panel {
-    position: relative;
-    display: inline-block;
-}
-
-.mcdu-panel > img {
-    z-index:10;
+    width: 100vw;
+    height: calc(100vw / .593);
     max-height: 100vh;
+    max-width: calc(100vh * .593);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.mcdu-bg, .mcdu-fg {
+.mcdu_case {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mcdu-glass {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
+    z-index: -1;
     overflow: hidden;
 }
 
-.mcdu-bg {
-    z-index: -1;
-}
-
-.mcdu-lcd {
-    background-color:#000;
-    width: 100%;
-    height: 100%;
-}
-
-.mcdu-lcd img {
-    position: absolute;
-    top: 7.1%;
-    left: 12.5%;
-    width: 74.8%;
-}
-
-[data-used-universe="1"] .screen-glow {
-    filter: brightness(50) blur(0.2vh);
-    opacity: 0.15;
-}
-
-.mcdu-lcd-dust img {
+.mcdu-glass--dust {
     display: none;
     position: absolute;
     top: 6%;
     left: 13%;
     width: 73.5%;
     opacity: 0.5;
-    transform: scale(-1,1);
+    transform: scale(-1, 1);
     filter: blur(0.1vh);
 }
 
-[data-used-universe="1"] .mcdu-lcd-dust img {
+[data-used-universe="1"] .mcdu-glass--dust {
     display: inline-block;
+}
+
+.screen-img,
+.screen-glow {
+    position: absolute;
+    top: 7.2%;
+    left: 12.5%;
+    width: 74.8%;
+}
+
+.screen-glow {
+    display: none;
+}
+
+[data-used-universe="1"] .screen-glow {
+    display: inline-block;
+    filter: brightness(50) blur(0.2vh);
+    opacity: 0.15;
+}
+
+
+.mcdu-fg {
+    position: absolute;
+    top: 0.3%;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 [data-button] {
@@ -79,7 +88,7 @@ body {
     top: 6%;
     left: 13%;
     width: 73.5%;
-    height: 40%    
+    height: 40%
 }
 
 .skbutton {
