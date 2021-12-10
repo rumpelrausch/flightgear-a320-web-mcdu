@@ -4,6 +4,7 @@ const MCDU = (function () {
 
     const body = document.body;
     let currentCacheBust = 0;
+    let lastSentText = '';
 
     function refreshScreen() {
         loadScreenImage(screenImageBaseUrl)
@@ -66,6 +67,9 @@ const MCDU = (function () {
         body.addEventListener('keyup', (event) => {
             const key = event.key.toUpperCase();
             if (key.match(/^[A-Z0-9/\-+.]$/)) {
+                if(key === '+' || key === '-') {
+                    return sendPlusMinusKey();
+                }
                 return sendButtonpress('button', key);
             }
 
@@ -84,9 +88,33 @@ const MCDU = (function () {
             return toggleUsedUniverse;
         }
 
+        if(actionKey === 'button' && actionValue === '-') {
+            return sendPlusMinusKey;
+        }
+
         return function () {
             sendButtonpress(actionKey, actionValue);
         };
+    }
+
+    function sendPlusMinusKey() {
+        if(lastSentText === '-') {
+            sendButtonpress('button', 'CLR')
+            .then(() => {
+                sendButtonpress('button', '+');
+            })
+            return;
+        }
+
+        if(lastSentText === '+') {
+            sendButtonpress('button', 'CLR')
+            .then(() => {
+                sendButtonpress('button', '-');
+            })
+            return;
+        }
+
+        sendButtonpress('button', '-');
     }
 
     function sendButtonpress(type, text) {
@@ -106,12 +134,18 @@ const MCDU = (function () {
         });
         request.send(body);
         setTimeout(refreshScreen, 150);
-        request.addEventListener('load', refreshScreen, true);
+        return new Promise((resolve) => {
+            request.addEventListener('load', () => {
+                lastSentText = text;
+                refreshScreen();
+                resolve();
+            }, true);
+        });
     }
 
     registerButtons();
     registerKeyboardInput();
-    //setInterval(refreshScreen, refreshInterval);
+    setInterval(refreshScreen, refreshInterval);
     refreshScreen();
 
     return {
