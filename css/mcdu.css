@@ -100,11 +100,17 @@ body {
     border-radius: 50%;
 }
 
-.btngroup-lsk .skbutton {
+.alphabutton {
+    width: 7.2%;
+    padding-bottom: 7.2%;
+    border-radius: 0.2vh;
+}
+
+.skbuttons-left .skbutton {
     left: 1.5%;
 }
 
-.btngroup-rsk .skbutton {
+.skbuttons-right .skbutton {
     right: 1.5%;
 }
 
@@ -202,4 +208,48 @@ body {
 
 .number-col3 {
     left: 31.7%;
+}
+
+.alphabutton-row1 .alphabutton {
+    top: 61.5%;
+}
+
+.alphabutton-row2 .alphabutton {
+    top: 67.3%;
+}
+
+.alphabutton-row3 .alphabutton {
+    top: 73.4%;
+}
+
+.alphabutton-row4 .alphabutton {
+    top: 79.4%;
+}
+
+.alphabutton-row5 .alphabutton {
+    top: 85.4%;
+}
+
+.alphabutton-row6 .alphabutton {
+    top: 91.4%;
+}
+
+.alphabutton-col1 {
+    left: 41.5%;
+}
+
+.alphabutton-col2 {
+    left: 51.8%;
+}
+
+.alphabutton-col3 {
+    left: 62.2%;
+}
+
+.alphabutton-col4 {
+    left: 72.57%;
+}
+
+.alphabutton-col5 {
+    left: 82.9%;
 }
