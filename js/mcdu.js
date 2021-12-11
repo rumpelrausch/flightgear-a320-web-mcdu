@@ -6,6 +6,27 @@ const MCDU = (function () {
     let currentCacheBust = 0;
     let lastSentText = '';
 
+    init();
+
+    return {
+        toggleUsedUniverse
+    }
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+    function init()
+    {
+        body.dataset.lastTouch = 0;
+        body.addEventListener('touchstart', preventZoomAction, { passive: false });
+
+        registerButtons();
+        registerKeyboardInput();
+        setInterval(refreshScreen, refreshInterval);
+        refreshScreen();    
+    }
+
     function refreshScreen() {
         loadScreenImage(screenImageBaseUrl)
             .then(setScreenSrc)
@@ -57,6 +78,7 @@ const MCDU = (function () {
                 return;
             }
             buttonElement.addEventListener('click', buttonFunction);
+            buttonElement.addEventListener('touchstart', preventZoomAction, true);
         });
     }
 
@@ -67,7 +89,7 @@ const MCDU = (function () {
         body.addEventListener('keyup', (event) => {
             const key = event.key.toUpperCase();
             if (key.match(/^[A-Z0-9/\-+.\ ]$/)) {
-                if(key === '+' || key === '-') {
+                if (key === '+' || key === '-') {
                     return sendPlusMinusKey();
                 }
                 return sendButtonpress('button', key);
@@ -88,7 +110,7 @@ const MCDU = (function () {
             return toggleUsedUniverse;
         }
 
-        if(actionKey === 'button' && actionValue === '-') {
+        if (actionKey === 'button' && actionValue === '-') {
             return sendPlusMinusKey;
         }
 
@@ -98,19 +120,19 @@ const MCDU = (function () {
     }
 
     function sendPlusMinusKey() {
-        if(lastSentText === '-') {
+        if (lastSentText === '-') {
             sendButtonpress('button', 'CLR')
-            .then(() => {
-                sendButtonpress('button', '+');
-            })
+                .then(() => {
+                    sendButtonpress('button', '+');
+                })
             return;
         }
 
-        if(lastSentText === '+') {
+        if (lastSentText === '+') {
             sendButtonpress('button', 'CLR')
-            .then(() => {
-                sendButtonpress('button', '-');
-            })
+                .then(() => {
+                    sendButtonpress('button', '-');
+                })
             return;
         }
 
@@ -143,12 +165,21 @@ const MCDU = (function () {
         });
     }
 
-    registerButtons();
-    registerKeyboardInput();
-    setInterval(refreshScreen, refreshInterval);
-    refreshScreen();
+    //https://exceptionshub.com/disable-double-tap-zoom-option-in-browser-on-touch-devices.html
+    function preventZoomAction(event) {
+        const t2 = event.timeStamp;
+        const touchedElement = event.currentTarget;
+        const t1 = touchedElement.dataset.lastTouch || t2;
+        const dt = t2 - t1;
+        const fingers = event.touches.length;
+        touchedElement.dataset.lastTouch = t2;
 
-    return {
-        toggleUsedUniverse
+        if (!dt || dt > 500 || fingers > 1) {
+            // no double-tap
+            return;
+        }
+
+        event.preventDefault();
+        event.target.click();
     }
 })();
