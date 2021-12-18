@@ -106,6 +106,11 @@ const MCDU = (function () {
         const buttonActions = buttonElement.getAttribute('data-button').split(':');
         const actionKey = buttonActions[0];
         const actionValue = buttonActions[1];
+
+        if(!actionKey) {
+            return;
+        }
+
         if (actionKey === 'toggleUsedUniverse') {
             return toggleUsedUniverse;
         }
