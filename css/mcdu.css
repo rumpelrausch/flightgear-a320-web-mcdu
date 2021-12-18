@@ -17,9 +17,9 @@ body {
 
 .mcdu {
     width: 100vw;
-    height: calc(100vw / .593);
+    height: calc(100vw / .6);
     max-height: 100vh;
-    max-width: calc(100vh * .593);
+    max-width: calc(100vh * .6);
     position: absolute;
     margin: auto;
     top: 0;
@@ -50,7 +50,7 @@ body {
     left: 13%;
     width: 73.5%;
     opacity: 0.5;
-    transform: scale(-1, 1);
+    transform: scale(1, -1);
     filter: blur(0.1vh);
 }
 
@@ -61,9 +61,9 @@ body {
 .screen-img,
 .screen-glow {
     position: absolute;
-    top: 7.2%;
-    left: 12.5%;
-    width: 74.8%;
+    top: 7.5%;
+    left: 13.4%;
+    width: 72.8%;
 }
 
 .screen-glow {
@@ -102,119 +102,119 @@ body {
 }
 
 .skbutton {
-    width: 6.5%;
-    height: 3.2%;
+    width: 7.7%;
+    height: 3.3%;
     border-radius: 0.2vh;
 }
 
 .menubutton {
-    width: 10.1%;
-    height: 4.1%;
+    width: 9.8%;
+    height: 4%;
     border-radius: 0.2vh;
 }
 
 .numberbutton {
-    width: 7.2%;
-    padding-bottom: 7.2%;
+    width: 7.5%;
+    padding-bottom: 7.5%;
     border-radius: 50%;
 }
 
 .alphabutton {
-    width: 7.2%;
-    padding-bottom: 7.2%;
+    width: 7.4%;
+    padding-bottom: 7.4%;
     border-radius: 0.2vh;
 }
 
 .skbuttons-left .skbutton {
-    left: 1.5%;
+    left: 1.6%;
 }
 
 .skbuttons-right .skbutton {
-    right: 1.5%;
+    right: 2.1%;
 }
 
 .sk-1 {
-    top: 12.1%;
+    top: 12.3%;
 }
 
 .sk-2 {
-    top: 17.2%;
+    top: 17.34%;
 }
 
 .sk-3 {
-    top: 22.3%;
+    top: 22.4%;
 }
 
 .sk-4 {
-    top: 27.5%;
+    top: 27.4%;
 }
 
 .sk-5 {
-    top: 32.7%;
+    top: 32.5%;
 }
 
 .sk-6 {
-    top: 37.8%;
+    top: 37.6%;
 }
 
 .menu-row1 .menubutton {
-    top: 48.7%;
+    top: 48.2%;
 }
 
 .menu-row2 .menubutton {
-    top: 53.8%;
+    top: 53.04%;
 }
 
 .menu-row3 .menubutton {
-    top: 58.9%;
+    top: 57.9%;
 }
 
 .menu-row4 .menubutton {
-    top: 64%;
+    top: 62.8%;
 }
 
 .menu-row5 .menubutton {
-    top: 69.1%;
+    top: 67.6%;
 }
 
 .menu-col1 {
-    left: 12%;
+    left: 11.3%;
 }
 
 .menu-col2 {
-    left: 24.5%;
+    left: 23.2%;
 }
 
 .menu-col3 {
-    left: 37.1%;
+    left: 35.1%;
 }
 
 .menu-col4 {
-    left: 49.6%;
+    left: 47%;
 }
 
 .menu-col5 {
-    left: 62.1%;
+    left: 59%;
 }
 
 .menu-col6 {
-    left: 74.6%;
+    left: 70.95%;
 }
 
 .number-row1 .numberbutton {
-    top: 74.9%;
+    top: 73.9%;
 }
 
 .number-row2 .numberbutton {
-    top: 80.4%;
+    top: 79.6%;
 }
 
 .number-row3 .numberbutton {
-    top: 85.8%;
+    top: 85.3%;
 }
 
 .number-row4 .numberbutton {
-    top: 91.3%;
+    top: 91%;
 }
 
 .number-col1 {
@@ -222,53 +222,53 @@ body {
 }
 
 .number-col2 {
-    left: 21.7%;
+    left: 21.1%;
 }
 
 .number-col3 {
-    left: 31.7%;
+    left: 30.6%;
 }
 
 .alphabutton-row1 .alphabutton {
-    top: 61.5%;
+    top: 59.5%;
 }
 
 .alphabutton-row2 .alphabutton {
-    top: 67.3%;
+    top: 65.8%;
 }
 
 .alphabutton-row3 .alphabutton {
-    top: 73.4%;
+    top: 72.1%;
 }
 
 .alphabutton-row4 .alphabutton {
-    top: 79.4%;
+    top: 78.4%;
 }
 
 .alphabutton-row5 .alphabutton {
-    top: 85.4%;
+    top: 84.8%;
 }
 
 .alphabutton-row6 .alphabutton {
-    top: 91.4%;
+    top: 91.1%;
 }
 
 .alphabutton-col1 {
-    left: 41.5%;
+    left: 40.6%;
 }
 
 .alphabutton-col2 {
-    left: 51.8%;
+    left: 50.7%;
 }
 
 .alphabutton-col3 {
-    left: 62.2%;
+    left: 60.7%;
 }
 
 .alphabutton-col4 {
-    left: 72.57%;
+    left: 70.7%;
 }
 
 .alphabutton-col5 {
-    left: 82.9%;
+    left: 80.7%;
 }
